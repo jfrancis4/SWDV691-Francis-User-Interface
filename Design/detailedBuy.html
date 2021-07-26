@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the title of the page to be Renda -->
+    <title>P2P Rentals</title>
+    <meta charset="utf-8">
+    <!-- Link to the bootstrap stylesheet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Link to stylesheet for social media links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to the script.js file, which contains the logic to trigger the hamburger menu -->
+    <script src="script.js" defer></script>
+    <!-- Link to the mustache files, which are responsible for displaying all the photos on the homepage -->
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="mustache.js"></script>
+    <script type="text/javascript" src="photos.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header is contained within a row class which consists of three columns -->
+        <div class="row" style="box-shadow: 10px 10px 5px rgb(48,48,48);">
+            <div class="col-lg-2">
+                <!-- In the first column of the header, place the renda logo and have it link back to the homepage -->
+                <div role="img" aria-label="Image of Renda Logo, click it to go to the home page">
+                    <a href="index.html">
+                        <img src="RendaLogo.png" width="158px" height="98px">
+                    </a>
+                </div>
+            </div>
+            <!-- In the second column of the header, place the search bar and the label -->
+            <div class="col-lg-8" style="height: 98px; padding-top: 30px;">
+                <form>
+                    <label for="search" class="inputLabel">Search</label>
+                    <input type="input" id="name" class="inputField" value="">
+                </form>
+            </div>
+            <!-- In the third columnn of the header, place the logout button -->
+            <div class="col-lg-2" style="height: 98px; padding-left: 50px;">
+                <button class="button2"><a href="login.html">Logout</a></button>
+            </div>
+
+            <!-- Create the navbar which is placed right below the header -->
+            <nav class="navbar">
+                <!-- Show the navbar logo when the main logo is hidden -->
+                <div class="logo"><img src="RendaLogoNav.PNG" style="max-width:30%; max-height:30%;"></div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <!-- Display the two navbar links -->
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="newposting.html">New Posting</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Open up a row element for the content section -->
+        <div class="row">
+            <!-- Open up a postmain section, which consists of white background with shadow -->
+                <div class="postmain">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- In the first column display the title, which is loaded from a JS url variable -->
+                            <h1 id="title"></h1>
+                        </div>
+                        <!-- In the second column display the category, which is loaded from a JS url variable-->
+                        <div class="col-lg-6" style="text-align: right; padding-right: 40px;"><h3 id="category"><h3></div>
+                    </div>
+
+
+                    <br>
+                    <!-- Place the image on the page dynamically -->
+                    <div id="imgDiv">
+                    <script>
+                    /* Script to load the image, title and category from the url variables */
+                    document.getElementById('imgDiv').innerHTML='<img src=\''+getQueryVariable("image")+'\'>'
+                    document.getElementById('title').innerHTML=getQueryVariable("title")
+                    document.getElementById('category').innerHTML=getQueryVariable("category")
+                    </script>
+                    <br>
+                    <br>
+
+                    <!-- Insert the information for the item including description, price, payment method, contact info and rental duration -->
+                    <p> <b>Item Description: </b>If you can imagine a furry humanoid seven feet tall, with the face of an intelligent gorilla and the braincase of a man, you'll have a rough idea of what they looked like -- except for their teeth. The canines would have fitted better in the face of a tiger, and showed at the corners of their wide, thin-lipped mouths, giving them an expression of ferocity.</p>
+                    <p>Reference: https://randomwordgenerator.com/paragraph.php</p>
+                    <p><b>Buy Price: </b> $100</p>
+                    <p><b>Payment Method: </b> Credit Card, PayPal, Cash</p>
+                    <p><b>Contact Info: </b> (000)-000-0000</p>
+            </div>
+
+            <div class="form-buttons" style="text-align: right;">
+                        
+                <!-- Set the Send form button -->
+                <button class="button" type="submit" onclick="window.location.href='confirmationBuy.html?image='+getQueryVariable('image')+'&title='+getQueryVariable('title')+'&category='+getQueryVariable('category')+''" name="submit">PLACE ORDER</button>
+                
+                
+            </div>
+            
+        </div>
+
+        
+        
+
+        <!-- define the target div location where the contents of the script get written into -->
+
+        <div id="target"></div>
+
+
+        <!-- Define the footer row, which consists of two columns -->
+        <div class="row" style="margin-top: 20px;">
+            <!-- Have the first column contain the copyright information -->
+            <div class="col-lg-8">
+
+                ©2021 P2P Rentals
+            </div>
+
+            <!-- Have the second column contain the social media links, about us and contact us links -->
+            <div class="col-lg-4">
+                <a href="#" class="fa fa-facebook" style="width: 60px; margin-top: 15px;"></a>
+                <a href="#" class="fa fa-twitter" style="width: 80px;"></a>
+                <button class="button2"><a href="aboutus.html">About Us</a></button>
+                <button class="button2"><a href="contactus.html">Contact Us/FAQ</a></button>
+                
+            </div>
+        <div>
+    </div>
+</body>
+</html>

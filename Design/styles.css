@@ -1,0 +1,275 @@
+/* Three color variables */
+/* Apply a mix in, which applies a background color of white to go against the default background color of green */
+.applywhite {
+  background-color: white;
+}
+/* This removes the rounded corners of the navigation bar */
+* {
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
+/* Apply a body background color of the theme based green color */
+body {
+  background-color: #00b050;
+  /* Nest container within body */
+}
+body .container {
+  max-width: 100%;
+  /* Nest row within container */
+  /* Ajust elements as necessary when the screen shrinks to below 1200 px,
+        this removes the traditional header and navbar and condenses down to a single nav bar
+        with a hamburger drop-down */
+}
+body .container .row {
+  /* Nest all the columns within the row */
+  /* Nest the nav-bar within the row */
+  /* define postmain class which is used across multiple pages */
+  /* Set the properties for the input label and field used on the forms */
+  /*  */
+  /* Set the preview__image within the preview box */
+  /* Set the styles for the social media links */
+  /* Add a hover effect if you want */
+  /* Set a specific color for each brand */
+  /* Facebook */
+  /* Twitter */
+  /* Remove the default link styling */
+  /* Set the properties for bold text and h1 and h3 headings */
+  /* Apply white to the columns */
+  /* Set the image max width and height */
+  /* Set the default button styling */
+  /* Set the form button style, when a user hovers over the button */
+  /* Set the form button style, when a user clicks the button */
+  /* Set the primary button style */
+  /* Green */
+  /* Set the primary button style once a user hovers over it */
+}
+body .container .row .col-lg-2 {
+  /* Use the apply white mix-in to change the background color of specific column in navbar to white */
+  background-color: white;
+}
+body .container .row .col-lg-8 {
+  /* Use the apply white mix-in to change the background color of specific column in navbar to white */
+  background-color: white;
+  /* Set styling for the search bar and label, use the theme green color */
+}
+body .container .row .col-lg-8 .inputLabel {
+  font-size: 14px;
+  font-weight: bold;
+  color: #00b050;
+}
+body .container .row .col-lg-8 input.inputField {
+  padding: 5px;
+  border: 1px solid #00b050;
+  width: 650px;
+}
+body .container .row .navbar {
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  align-items: center;
+  /* Apply the mix-in to make navbar white */
+  background-color: white;
+  /* Set all the navbar properties */
+}
+body .container .row .navbar .toggle-button {
+  position: absolute;
+  top: 2.75rem;
+  right: 7rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2px;
+  height: 21px;
+}
+body .container .row .navbar .toggle-button .bar {
+  height: 3px;
+  width: 40px;
+  background-color: #00b050;
+  border-radius: 10px;
+}
+body .container .row .navbar .logo {
+  display: none;
+}
+body .container .row .navbar .navbar-links ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+body .container .row .navbar .navbar-links li {
+  list-style: none;
+}
+body .container .row .navbar .navbar-links li a {
+  text-decoration: none;
+  color: #00b050;
+  padding: 1rem;
+  display: block;
+}
+body .container .row .navbar .navbar-links li:hover {
+  background-color: #cccccc;
+  color: #00b050;
+}
+body .container .row .col-md-4 {
+  /* nest the postleft class within the column */
+}
+body .container .row .col-md-4 .postleft {
+  height: auto;
+  margin: 1%;
+  padding: 20px;
+  margin-top: 2em;
+  background-color: white;
+  box-shadow: 10px 10px 5px #303030;
+}
+body .container .row .postmain {
+  height: 100%;
+  margin: 1%;
+  padding: 20px;
+  margin-top: 2em;
+  background-color: white;
+  box-shadow: 10px 10px 5px #303030;
+}
+body .container .row .inputLabel {
+  font-size: 14px;
+  font-weight: bold;
+  color: #00b050;
+}
+body .container .row input.inputField {
+  padding: 5px;
+  border: 1px solid #00b050;
+  width: 650px;
+}
+body .container .row .image-preview {
+  width: 300px;
+  min-height: 100px;
+  border: 2px solid #00b050;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #00b050;
+}
+body .container .row .image-preview__image {
+  display: none;
+  width: 100%;
+}
+body .container .row .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+body .container .row .fa:hover {
+  opacity: 0.7;
+}
+body .container .row .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+body .container .row .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+body .container .row .col-lg-8 {
+  color: #00b050;
+  background-color: white;
+  padding: 39px;
+  height: 100%;
+}
+body .container .row a {
+  color: inherit;
+  text-decoration: none;
+  /* no underline */
+}
+body .container .row a2 {
+  color: #00b050;
+  text-decoration: none;
+  /* no underline */
+}
+body .container .row b {
+  color: #00b050;
+}
+body .container .row h1 {
+  color: #00b050;
+}
+body .container .row h3 {
+  color: #00b050;
+}
+body .container .row .col-lg-4 {
+  height: 98px;
+  align-items: center;
+  background-color: white;
+}
+body .container .row img {
+  max-width: 100%;
+  max-height: 100%;
+}
+body .container .row button {
+  margin-top: 2em;
+  background-color: #00b050;
+  border: 0px;
+  padding: 10px;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+body .container .row button:hover {
+  background-color: #006800;
+  border: 0px;
+}
+body .container .row button:active {
+  background-color: #006800;
+  border: 0px;
+}
+body .container .row .button2 {
+  background-color: #ffffff;
+  color: #00b050;
+}
+body .container .row .button2:hover {
+  color: #000000;
+  /* Green */
+  background-color: #cccccc;
+}
+body .container .row .button2:active {
+  background-color: #cccccc;
+  border: 0px;
+}
+@media all and (max-width: 1200px) {
+  body .container {
+    /* Nest the elements in the media query the same way as above */
+  }
+  body .container .row .col-lg-2 {
+    display: none;
+  }
+  body .container .row .col-lg-8 {
+    display: none;
+  }
+  body .container .row .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body .container .row .navbar .logo {
+    display: flex;
+  }
+  body .container .row .navbar .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  body .container .row .navbar .toggle-button {
+    display: flex;
+  }
+  body .container .row .navbar .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  body .container .row .navbar .navbar-links li {
+    text-align: center;
+  }
+  body .container .row .navbar .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+  body .container .row .navbar .navbar-links.active {
+    display: flex;
+  }
+}

@@ -1,0 +1,299 @@
+/* Three color variables */
+@green:rgb(0,176,80);
+@darkgreen: rgb(0, 104, 0);
+@lightgrey: rgb(204, 204, 204);
+
+/* Apply a mix in, which applies a background color of white to go against the default background color of green */
+.applywhite{
+    background-color: white;
+}
+
+/* This removes the rounded corners of the navigation bar */
+* {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+
+/* Apply a body background color of the theme based green color */
+body {
+    background-color: @green;
+    /* Nest container within body */
+    .container {
+        max-width: 100%;
+        /* Nest row within container */
+        .row {
+            /* Nest all the columns within the row */
+            .col-lg-2 {
+                /* Use the apply white mix-in to change the background color of specific column in navbar to white */
+                .applywhite;
+            }
+
+            .col-lg-8 {
+                /* Use the apply white mix-in to change the background color of specific column in navbar to white */
+                .applywhite;
+                /* Set styling for the search bar and label, use the theme green color */
+                .inputLabel {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: @green;
+                }
+
+                input.inputField {
+                    padding: 5px;
+                    border: 1px solid @green;
+                    width: 650px;
+                }
+            }
+            /* Nest the nav-bar within the row */
+            .navbar {
+                display: flex;
+                height: auto;
+                justify-content: space-between;
+                margin-bottom: 0px;
+                align-items: center;
+                /* Apply the mix-in to make navbar white */
+                .applywhite;
+                /* Set all the navbar properties */
+                .toggle-button {
+                    position: absolute;
+                    top: 2.75rem;
+                    right: 7rem;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 2px;
+                    height: 21px;
+                }
+
+                .toggle-button .bar {
+                    height: 3px;
+                    width: 40px;
+                    background-color: @green;
+                    border-radius: 10px;
+                }
+
+                .logo {
+                    display: none;
+                }
+
+                .navbar-links ul {
+                    margin: 0px;
+                    padding: 0px;
+                    display: flex;
+                }
+
+                .navbar-links li {
+                    list-style: none;
+                }
+
+                .navbar-links li a {
+                    text-decoration: none;
+                    color: @green;
+                    padding: 1rem;
+                    display: block;
+                }
+
+                .navbar-links li:hover {
+                    background-color: @lightgrey;
+                    color: @green;
+                }
+            }
+
+            .col-md-4 {
+                /* nest the postleft class within the column */
+                .postleft {
+                    height: auto;
+                    margin: 1%;
+                    padding: 20px;
+                    margin-top: 2em;
+                    background-color: white;
+                    box-shadow: 10px 10px 5px rgb(48,48,48);
+                }
+            }
+            /* define postmain class which is used across multiple pages */
+            .postmain {
+                height: 100%;
+                margin: 1%;
+                padding: 20px;
+                margin-top: 2em;
+                background-color: white;
+                box-shadow: 10px 10px 5px rgb(48,48,48);
+            }
+            /* Set the properties for the input label and field used on the forms */
+            .inputLabel {
+                font-size: 14px;
+                font-weight: bold;
+                color: @green;
+            }
+
+            input.inputField {
+                padding: 5px;
+                border: 1px solid @green;
+                width: 650px;
+            }
+            /*  */
+            .image-preview {
+                width: 300px;
+                min-height: 100px;
+                border: 2px solid @green;
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                color: @green;
+            }
+            /* Set the preview__image within the preview box */
+            .image-preview__image {
+                display: none;
+                width: 100%;
+            }
+            /* Set the styles for the social media links */
+            .fa {
+                padding: 20px;
+                font-size: 30px;
+                width: 50px;
+                text-align: center;
+                text-decoration: none;
+            }
+            /* Add a hover effect if you want */
+            .fa:hover {
+                opacity: 0.7;
+            }
+            /* Set a specific color for each brand */
+            /* Facebook */
+            .fa-facebook {
+                background: #3B5998;
+                color: white;
+            }
+            /* Twitter */
+            .fa-twitter {
+                background: #55ACEE;
+                color: white;
+            }
+
+
+
+            .col-lg-8 {
+                color: @green;
+                .applywhite;
+                padding: 39px;
+                height: 100%;
+            }
+            /* Remove the default link styling */
+            a {
+                color: @green;
+                text-decoration: none; /* no underline */
+            }
+            /* Set the properties for bold text and h1 and h3 headings */
+            b {
+                color: @green;
+            }
+
+            h1 {
+                color: @green;
+            }
+
+            h3 {
+                color: @green;
+            }
+            /* Apply white to the columns */
+            .col-lg-4 {
+                height: 98px;
+                align-items: center;
+                .applywhite;
+            }
+            /* Set the image max width and height */
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            /* Set the default button styling */
+            button {
+                margin-top: 2em;
+                background-color: @green;
+                border: 0px;
+                padding: 10px;
+                color: white;
+                outline: none;
+                transition: 0.3s;
+            }
+            /* Set the form button style, when a user hovers over the button */
+            button:hover {
+                background-color: @darkgreen;
+                border: 0px;
+            }
+            /* Set the form button style, when a user clicks the button */
+            button:active {
+                background-color: @darkgreen;
+                border: 0px;
+            }
+            /* Set the primary button style */
+            .button2 {
+                background-color: #ffffff;
+                color: @green
+            }
+            /* Green */
+            /* Set the primary button style once a user hovers over it */
+            .button2:hover {
+                color: rgb(0, 0, 0); /* Green */
+                background-color: @lightgrey;
+            }
+
+            .button2:active {
+                background-color: @lightgrey;
+                border: 0px;
+            }
+        }
+        /* Ajust elements as necessary when the screen shrinks to below 1200 px,
+        this removes the traditional header and navbar and condenses down to a single nav bar
+        with a hamburger drop-down */
+        @media all and (max-width: 1200px) {
+            /* Nest the elements in the media query the same way as above */
+            .row {
+                .col-lg-2 {
+                    display: none;
+                }
+
+                .col-lg-8 {
+                    display: none;
+                }
+
+                .navbar {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .logo {
+                        display: flex;
+                    }
+
+                    .navbar-links {
+                        display: none;
+                        width: 100%;
+                    }
+
+                    .toggle-button {
+                        display: flex;
+                    }
+
+                    .navbar-links ul {
+                        width: 100%;
+                        flex-direction: column;
+                    }
+
+                    .navbar-links li {
+                        text-align: center;
+                    }
+
+                    .navbar-links li a {
+                        padding: .5rem 1rem;
+                    }
+
+                    .navbar-links.active {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
